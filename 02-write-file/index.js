@@ -10,6 +10,11 @@ const rl = readline.createInterface({
     output: process.stdout,
 })
 
+// We can use fs.writeFile
+fs.appendFile(pathFull, '', function (err) {
+    if (err) throw err;
+  });
+
 rl.setPrompt('Please type some phrase!\n')
 rl.prompt();
 
